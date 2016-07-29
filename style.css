@@ -1,0 +1,84 @@
+.color-white{
+	color:#fff;
+	transition: color .3s;
+}
+
+.trigger{
+	position: fixed;
+	left: 30px;
+	top:15px;
+	//transform: translateX(-50%);
+	font-size: 3em;
+	cursor: pointer;
+	display: block;
+	z-index: 9999;
+	transition: color .3s;
+}
+
+.nav-border{
+	width: 100%;
+	height:100%;
+	position: fixed;
+	background-color:transparent;
+}
+
+.nav-on{
+	border: solid 30px;
+	border-top-width: 90px;
+	transition: border .2s, border-top-width .2s, background-color .2s;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-off{
+	border: solid 0px;
+	border-top-width: 0px;
+	transition: border .2s, border-top-width .2s, background-color .2s;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+/*********************************************
+ NAVIGATION
+*********************************************/
+
+nav{
+	position: absolute;
+	left:100px;
+	top:-40px;
+	transition: top 0s;
+}
+
+nav a{
+	margin-right:30px;	
+	font-size:1em;
+	color:#fff;
+}
+
+nav.active{
+	top:35px;
+	transition: top .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
