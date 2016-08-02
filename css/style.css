@@ -1,12 +1,30 @@
 @font-face {
-    font-family: "avenir";
-    src: url("fonts/AvenirNextLTPro-Heavy.woff") format('woff');
+    font-family: "avenir-bold";
+    src: url("../fonts/AvenirNextLTPro-Heavy.woff") format('woff');
+}
+
+@font-face {
+    font-family: "avenir-cn";
+    src: url("../fonts/AvenirNextLTPro-Cn.woff") format('woff');
 }
 
 body{
 	font-family: avenir, arial;
 	overflow-x: hidden;
 }	
+
+h1{
+    font-family: avenir-bold;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 80px;
+}
+
+p{
+    font-family: 'avenir-cn';  
+    font-size:1.2em;
+    color:#222222;
+}
 
 .color-white{
 	color:#fff;
@@ -30,21 +48,32 @@ body{
 	height:100%;
 	position: fixed;
 	background-color:transparent;
-	z-index:999;
+	
 }
 
 .nav-on{
 	border: solid 30px;
 	border-top-width: 90px;
-	transition: border .4s, border-top-width .4s, background-color .4s;
+	transition: border .4s, border-top-width .4s, background-color .4s, z-index .4s;
 	background-color: rgba(0, 0, 0, 0.4);
+    z-index:999;
 }
 
 .nav-off{
 	border: solid 0px;
 	border-top-width: 0px;
-	transition: border .4s, border-top-width .4s, background-color .4s;
-	background-color: rgba(0, 0, 0, 0);
+	transition: border .4s, border-top-width .4s, background-color .4s, z-index .4s;
+	background: none;
+}
+
+.page{
+    //box-shadow: 0px 0px 5px #888888;
+    min-height:100vh;
+    z-index:1;
+}
+
+.container{
+     max-width:1050px;   
 }
 
 /*********************************************
@@ -52,7 +81,7 @@ body{
 *********************************************/
 
 nav{
-	position: absolute;
+	position: fixed;
 	left:100px;
 	top:-40px;
 	transition: top 0.4s;
@@ -76,7 +105,12 @@ nav.active{
  HOME
 *********************************************/
 #home{
-	min-height:100vh;	
+	min-height:100vh;
+    //-moz-transform: scale(0.8);
+    //-webkit-transform: scale(0.8);
+    //transform: scale(0.8);
+    
+    
 }
 
 .logo{
@@ -99,7 +133,7 @@ nav.active{
 }
 
 .tagline{
-	
+	margin-bottom:60px;
 }
 
 .tagline img{
@@ -108,12 +142,13 @@ nav.active{
 	display: block;
 }
 
-.tagline p{
-	font-size:1.em;
+.sub-heading{
+	font-size:1.5em;
 	text-transform: uppercase;
-	font-weight:900;
+	font-weight:400;
 	text-align: center;
-	letter-spacing: 3px;
+	letter-spacing: 4px;
+    font-family: avenir-cn;
 }
 
 
@@ -147,6 +182,78 @@ nav.active{
 		left:-23px;
 	}
 }
+
+/*********************************************
+ ABOUT ME
+*********************************************/
+
+#about-me img{
+     max-height:600px;   
+}
+
+
+
+
+
+
+
+
+
+
+/*********************************************
+ UP ARROW
+*********************************************/
+
+.up-arrow{
+     position: fixed;
+    display: block;
+    bottom: 20px;
+    z-index: 9999;
+    opacity:0.3;
+    transition: right .3s;
+}
+
+.up-arrow img{
+    height:35px;
+}
+
+.arrow-on{
+    right:20px;
+}
+
+.arrow-off{
+    right:-50px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
