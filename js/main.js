@@ -18,7 +18,36 @@ $(document).ready(function () {
 	
     $(".trigger").click(triggerNav);
     $("nav a").click(triggerNav);
-
+	
+	
+	//ANIMATE WORK SLIDER
+	function slideNext() {
+		var active = $(".slide-on");
+		if (active.hasClass("last-slide")) {
+			$(".first-slide").addClass("slide-on");
+			active.removeClass("slide-on");
+		}
+		else{
+			active.next().addClass("slide-on");
+			active.removeClass("slide-on");
+		}
+	}
+	
+	function slidePrev() {
+		var active = $(".slide-on");
+		if (active.hasClass("first-slide")) {
+			$(".last-slide").addClass("slide-on");
+			active.removeClass("slide-on");
+		}
+		else{
+			active.prev().addClass("slide-on");
+			active.removeClass("slide-on");
+		}
+	}
+	
+	$(".work-next").click(slideNext);
+	$(".work-prev").click(slidePrev);
+	
     
     //SMOOTH SCROLL BETWEEN SECTIONS
     $(function() {
