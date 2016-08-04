@@ -38,7 +38,7 @@ p{
 .trigger{
 	position: fixed;
 	left: 30px;
-	top:15px;
+	top:18px;
 	//transform: translateX(-50%);
 	font-size: 3em;
 	cursor: pointer;
@@ -91,11 +91,32 @@ nav{
 }
 
 nav a{
+	font-family: avenir-cn;
 	margin-right:30px;	
-	font-size:1em;
-	color:#fff;
-	font-weight: 900;
+	font-size:1.2em;
+	color:#fff !important;
 	letter-spacing: 3px;
+	float: left;
+	text-decoration: none !important;
+}
+
+nav a:after{
+	content:" ";
+	display: block;
+	background-color: #fff;
+	width:30px;
+	height: 4px;
+	text-align: center;
+	position: relative;
+	left: -30px;
+	opacity: 0;
+	transition: .3s;
+}
+
+nav a:hover:after{
+	left: 0px;
+	opacity: 1;
+	transition: .3s;
 }
 
 nav.active{
@@ -157,7 +178,7 @@ nav.active{
 }
 
 .tagline img{
-	width:500px;
+	max-width:500px;
 	margin:80px auto 15px;
 	display: block;
 }
@@ -165,33 +186,34 @@ nav.active{
 .sub-heading{
 	font-size:1.5em;
 	text-transform: uppercase;
-	font-weight:400;
 	text-align: center;
 	letter-spacing: 4px;
     font-family: avenir-cn;
+	color:#aaa;
 }
 
 
 @media screen and (max-width: 768px) {
 	.logo img{
-		height:175px;
+		height:155px;
 	}
 	#T{
-		left:34px;
+		left:29px;
 	}
 
 	#A{
-		left:-33px;
+		left:-29px;
 	}
 	
 	.tagline img{
-		width:350px;
+		max-width:350px;
+		width:90%;
 	}
 }
 
 @media screen and (max-width: 480x) {
 	.logo img{
-		height:125px;
+		height:100px;
 	}
 	#T{
 		left:24px;
@@ -206,7 +228,23 @@ nav.active{
  ABOUT ME
 *********************************************/
 
-#about-me img{
+.skill img{
+	//max-width: 150px;
+	max-height:150px;
+	text-align: center;
+	display: block;
+	margin: 60px auto 30px; 
+}
+
+.skill p{
+	text-align: center;	
+}
+
+.skill h2{
+	text-align: center;
+}
+
+.silhouette{
      max-height:600px;  
 	position: relative;
 	left: -100px;
@@ -214,9 +252,7 @@ nav.active{
 
 @media screen and (max-width: 768px) {
      #about-me img{
-         max-height:40vh;  
-        position: relative;
-        left: 30%;
+
     }   
 }
 
@@ -297,7 +333,6 @@ nav.active{
 @media screen and (max-width:991px){
 	.slide img{
 		top: 30px;
-		max-height:40vh;
 	}
 	.work-details{
 		margin-top: 30px;
