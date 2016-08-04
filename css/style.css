@@ -51,6 +51,8 @@ p{
     //box-shadow: 0px 0px 5px #888888;
     min-height:100vh;
     z-index:1;
+    display: block;
+
 }
 
 .container{
@@ -70,6 +72,10 @@ p{
 	border-color:#fbb040;
 	color:#fbb040;
 	transition: .2s;
+}
+
+@media screen and (max-width:767px){
+
 }
 
 /*********************************************
@@ -166,7 +172,6 @@ nav.active{
 }
 
 
-
 @media screen and (max-width: 768px) {
 	.logo img{
 		height:175px;
@@ -207,7 +212,13 @@ nav.active{
 	left: -100px;
 }
 
-
+@media screen and (max-width: 768px) {
+     #about-me img{
+         max-height:40vh;  
+        position: relative;
+        left: 30%;
+    }   
+}
 
 /*********************************************
  WORK
@@ -255,6 +266,7 @@ nav.active{
 	max-height:60vh;
 	position: relative;
 	top: 0px;
+    display: block;
 }
 
 .work-prev, .work-next{
@@ -264,6 +276,8 @@ nav.active{
 	color:#c2c2c2;
 	transition: .2s;
 	cursor: pointer;
+    z-index:3;
+    display: block;
 }
 
 .work-prev{
@@ -298,11 +312,22 @@ nav.active{
 	.slide h2{
 		text-align: center;	
 	}
+    
+    .slide{
+         position: inherit;
+        transform: scale(1) !important;
+        opacity: 1;
+        margin-bottom:100px;
+    }
+    
+    .work-prev, .work-next{
+         display: none;
+    }
 }
 
 @media screen and (max-width:480px){
 	.slide-container{
-		margin:0 30px;	
+		margin:0;	
 	}
 	.work-prev{
 		left:10px;
@@ -314,9 +339,29 @@ nav.active{
 	
 	.slide img{
 		right:0;
-		max-height:30vh;
+		
 	}
 }
+
+
+/*********************************************
+ CONTACT
+*********************************************/
+
+#contact p{
+     text-align: center;   
+    font-size: 1.5em;
+    font-weight: 00;
+}
+
+#contact i{
+     font-size: 2em;   
+}
+
+#contact .col-sm-4{
+     margin-top:80px;   
+}
+
 
 
 /*********************************************
